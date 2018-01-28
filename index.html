@@ -15,137 +15,151 @@
     <p>
         <div class="container">
             <h2>Planilla de investigación</h2>
-            <h3>Protagonistas:</h3>
-            <table>
-            <tr>
-                <td>
+            <form action="" class="formulario">
+                <div class="personajes">
+                    <h3>Protagonistas:</h3>
                     <table>
-                    <tr>
-                        <td>Gato</td>
-                        <td><input type="checkbox" name="gatoCheck"></td>
-                        <td>Tero</td>
-                        <td><input type="checkbox" name="teroCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Buey</td>
-                        <td><input type="checkbox" name="bueyCheck"></td>
-                        <td>Lorna</td>
-                        <td><input type="checkbox" name="lorCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Ardilla</td>
-                        <td><input type="checkbox" name="ardillaCheck"></td>
-                        <td>Búho</td>
-                        <td><input type="checkbox" name="buhoCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Lince</td>
-                        <td><input type="checkbox" name="linceCheck"></td>
-                        <td>Pantera</td>
-                        <td><input type="checkbox" name="panterCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Orca</td>
-                        <td><input type="checkbox" name="orcaCheck"></td>
-                        <td>Cigüeña</td>
-                        <td><input type="checkbox" name="cigueCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Tiburón</td>
-                        <td><input type="checkbox" name="tibuCheck"></td>
-                        <td>Edith</td>
-                        <td><input type="checkbox" name="ediCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Oso</td>
-                        <td><input type="checkbox" name="osoCheck"></td>
-                        <td>Llama</td>
-                        <td><input type="checkbox" name="llamaCheck"></td>
-                    </tr>
-                    <td>Fonti</td>
-                    <td><input type="checkbox" name="fontiCheck"></td>
-                    <td>Claudia</td>
-                    <td><input type="checkbox" name="clauCheck"></td>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td> <label class="etiqueta" for="gato">Gato </label></td>
+                                        <td><input type="checkbox" name="gatoCheck" id="gato"></td>
+                                        <td><label class="etiqueta" for="tero">Tero </label></td>
+                                        <td><input type="checkbox" name="teroCheck" id="tero"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="etiqueta" for="buey">Buey </label></td>
+                                        <td><input type="checkbox" name="bueyCheck" id="buey"></td>
+                                        <td><label class="etiqueta" for="lorna">Lorna </label></td>
+                                        <td><input type="checkbox" name="lorCheck" id="lorna"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ardilla</td>
+                                        <td><input type="checkbox" name="ardillaCheck"></td>
+                                        <td>Búho</td>
+                                        <td><input type="checkbox" name="buhoCheck"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lince</td>
+                                        <td><input type="checkbox" name="linceCheck"></td>
+                                        <td>Pantera</td>
+                                        <td><input type="checkbox" name="panterCheck"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Orca</td>
+                                        <td><input type="checkbox" name="orcaCheck"></td>
+                                        <td>Cigüeña</td>
+                                        <td><input type="checkbox" name="cigueCheck"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tiburón</td>
+                                        <td><input type="checkbox" name="tibuCheck"></td>
+                                        <td>Edith</td>
+                                        <td><input type="checkbox" name="ediCheck"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oso</td>
+                                        <td><input type="checkbox" name="osoCheck"></td>
+                                        <td>Llama</td>
+                                        <td><input type="checkbox" name="llamaCheck"></td>
+                                    </tr>
+                                        <td>Fonti</td>
+                                        <td><input type="checkbox" name="fontiCheck"></td>
+                                        <td>Claudia</td>
+                                        <td><input type="checkbox" name="clauCheck"></td>
+                                </table>
+                            </td>
+                        </tr>
                     </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Lugar:</h3>
+                </div>
+                <div class="lugares">
                     <table>
-                    <tr>
-                        <td>Hall</td>
-                        <td><input type="checkbox" name="hallCheck"></td>
-                        <td>Sala de estar</td>
-                        <td><input type="checkbox" name="loungeCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Comedor</td>
-                        <td><input type="checkbox" name="dineCheck"></td>
-                        <td>Cocina</td>
-                        <td><input type="checkbox" name="kitchCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Salón de baile</td>
-                        <td><input type="checkbox" name="ballCheck"></td>
-                        <td>Jardín de invierno</td>
-                        <td><input type="checkbox" name="consCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Sala de billar</td>
-                        <td><input type="checkbox" name="billCheck"></td>
-                        <td>Biblioteca</td>
-                        <td><input type="checkbox" name="libCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Estudio</td>
-                        <td><input type="checkbox" name="studyCheck"></td>
-                    </tr>
-                </table></td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Herramientas:</h3>
+                        <tr>
+                            <td>
+                                <h3>Lugar:</h3>
+                                <table>
+                                <tr>
+                                    <td>Hall</td>
+                                    <td><input type="checkbox" name="hallCheck"></td>
+                                    <td>Sala de estar</td>
+                                    <td><input type="checkbox" name="loungeCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Comedor</td>
+                                    <td><input type="checkbox" name="dineCheck"></td>
+                                    <td>Cocina</td>
+                                    <td><input type="checkbox" name="kitchCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Salón de baile</td>
+                                    <td><input type="checkbox" name="ballCheck"></td>
+                                    <td>Jardín de invierno</td>
+                                    <td><input type="checkbox" name="consCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Sala de billar</td>
+                                    <td><input type="checkbox" name="billCheck"></td>
+                                    <td>Biblioteca</td>
+                                    <td><input type="checkbox" name="libCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Estudio</td>
+                                    <td><input type="checkbox" name="studyCheck"></td>
+                                </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="herramientas">
                     <table>
-                    <tr>
-                        <td>Hacha</td>
-                        <td><input type="checkbox" name="hachaCheck"></td>
-                        <td>Navaja</td>
-                        <td><input type="checkbox" name="navajaCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Soga</td>
-                        <td><input type="checkbox" name="sogaCheck"></td>
-                        <td>Fogón</td>
-                        <td><input type="checkbox" name="fuegoCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Pala</td>
-                        <td><input type="checkbox" name="palaCheck"></td>
-                        <td>Lobato</td>
-                        <td><input type="checkbox" name="lobatoCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Cucharón</td>
-                        <td><input type="checkbox" name="cucharaCheck"></td>
-                        <td>Cajón de Patrulla</td>
-                        <td><input type="checkbox" name="cajonCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Garrafa</td>
-                        <td><input type="checkbox" name="garrafaCheck"></td>
-                        <td>letrina</td>
-                        <td><input type="checkbox" name="letrinaCheck"></td>
-                    </tr>
-                    <tr>
-                        <td>Microondas</td>
-                        <td><input type="checkbox" name="microCheck"></td>
-                        <td>Escalera</td>
-                        <td><input type="checkbox" name="escaCheck"></td>
-                    </tr>
-                </table></td>
-            </tr>  
-        </table>
+                        <tr>
+                            <td>
+                                <h3>Herramientas:</h3>
+                                <table>
+                                <tr>
+                                    <td>Hacha</td>
+                                    <td><input type="checkbox" name="hachaCheck"></td>
+                                    <td>Navaja</td>
+                                    <td><input type="checkbox" name="navajaCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Soga</td>
+                                    <td><input type="checkbox" name="sogaCheck"></td>
+                                    <td>Fogón</td>
+                                    <td><input type="checkbox" name="fuegoCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pala</td>
+                                    <td><input type="checkbox" name="palaCheck"></td>
+                                    <td>Lobato</td>
+                                    <td><input type="checkbox" name="lobatoCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Cucharón</td>
+                                    <td><input type="checkbox" name="cucharaCheck"></td>
+                                    <td>Cajón de Patrulla</td>
+                                    <td><input type="checkbox" name="cajonCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Garrafa</td>
+                                    <td><input type="checkbox" name="garrafaCheck"></td>
+                                    <td>letrina</td>
+                                    <td><input type="checkbox" name="letrinaCheck"></td>
+                                </tr>
+                                <tr>
+                                    <td>Microondas</td>
+                                    <td><input type="checkbox" name="microCheck"></td>
+                                    <td>Escalera</td>
+                                    <td><input type="checkbox" name="escaCheck"></td>
+                                </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
         <br>
     </div>
         
@@ -173,5 +187,6 @@
         <button id="riesgo">Arriesgarse</button>
     </p>
     <p id="solucion"></p>
+    <p><button id="reset">Reset</button></p>
 </body>
 </html>
