@@ -20,7 +20,7 @@ h1 {
 	border: 2px #eee dashed;
 	border-radius: 2px;;
 	padding: 1% 5% 2%;
-	margin: 0px 30% 0px;
+	margin: 0px auto;
 	position: relative;
 }
 .container 
