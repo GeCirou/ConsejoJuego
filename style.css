@@ -6,3 +6,14 @@ h1 {
     color: red;
     
 }
+.parte {
+	border: 2px #eee dashed;
+	border-radius: 2px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+div h3 {
+
+}
