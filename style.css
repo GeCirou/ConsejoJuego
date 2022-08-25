@@ -9,13 +9,16 @@ h1 {
 	text-decoration: underline;
     
 }
+h2 {
+	text-decoration: underline;
+}
 .parte {
 	border: 2px #eee dashed;
 	border-radius: 2px;;
 	padding: 1% 5% 2%;
 	margin: 0px 10% 0px;
 }
-div h3 {
+h3 {
 	text-decoration: underline;
 }
 table {
@@ -23,4 +26,7 @@ table {
 }
 table .nombre {
 	width: 5%;
+}
+* {
+	position: relative;
 }
