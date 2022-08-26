@@ -10,17 +10,16 @@
     <table>
         <td>Investigador: </td>
         <td><input type="text"></td>
-        <td><button>Guardar</button></td>
+        <td><button id="guardar">Guardar</button></td>
     </table>
     <p>
-        <table>
-            <tr><th><h2>Planilla de investigación</h2></th></tr>
+        <div class="container">
+            <h2>Planilla de investigación</h2>
+            <h3>Protagonistas:</h3>
+            <table>
             <tr>
                 <td>
                     <table>
-                    <tr>
-                        <th><h3>Protagonistas:</h3></th>
-                    </tr>
                     <tr>
                         <td>Gato</td>
                         <td><input type="checkbox" name="gatoCheck"></td>
@@ -72,12 +71,10 @@
             </tr>
             <tr>
                 <td>
+                    <h3>Lugar:</h3>
                     <table>
                     <tr>
-                        <th><h3>Lugar:</h3></th>
-                    </tr>
-                    <tr>
-                        <td>Vestibulo</td>
+                        <td>Hall</td>
                         <td><input type="checkbox" name="hallCheck"></td>
                         <td>Sala de estar</td>
                         <td><input type="checkbox" name="loungeCheck"></td>
@@ -91,7 +88,7 @@
                     <tr>
                         <td>Salón de baile</td>
                         <td><input type="checkbox" name="ballCheck"></td>
-                        <td>Invernadero</td>
+                        <td>Jardín de invierno</td>
                         <td><input type="checkbox" name="consCheck"></td>
                     </tr>
                     <tr>
@@ -107,8 +104,9 @@
                 </table></td>
             </tr>
             <tr>
-                <td><table>
-                    <tr><th><h3>Herramientas:</h3></th></tr>
+                <td>
+                    <h3>Herramientas:</h3>
+                    <table>
                     <tr>
                         <td>Hacha</td>
                         <td><input type="checkbox" name="hachaCheck"></td>
@@ -128,7 +126,7 @@
                         <td><input type="checkbox" name="lobatoCheck"></td>
                     </tr>
                     <tr>
-                        <td>Cucharón de cocina</td>
+                        <td>Cucharón</td>
                         <td><input type="checkbox" name="cucharaCheck"></td>
                         <td>Cajón de Patrulla</td>
                         <td><input type="checkbox" name="cajonCheck"></td>
@@ -142,10 +140,13 @@
                 </table></td>
             </tr>  
         </table>
+        <br>
+    </div>
+        
     </p>
     <p>
+        <h2>Solución</h2>
         <table>
-            <tr ><th><h3>Solución</h3></th></tr>
             <tr>
                 <td>Victima: </td>
                 <td><input type="text"></td>
@@ -167,6 +168,8 @@
             </tr>
 
         </table>
+        <button id="riesgo">Arriesgarse</button>
     </p>
+    <p id="solucion"></p>
 </body>
 </html>
