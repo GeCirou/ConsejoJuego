@@ -10,47 +10,39 @@ h1 {
 	text-decoration: underline;
     
 }
-.parte {
+.container {
+	width: 30%;
 	border: 2px #eee dashed;
 	border-radius: 2px;;
 	padding: 1% 5% 2%;
-	margin: 0px 10% 0px;
+	margin: 0px 30% 0px;
+	position: relative;
 }
+.container 
 div h3 {
 	text-decoration: underline;
 }
 table {
 	margin: 0 auto;
-	max-width: 100%;
 }
-
-.container {
-	width: 30%;
-	border: 2px white dashed;
-	border-radius: 2px;
-	margin: 0 auto;
+td {
+	width: 5em;
+}
+.personajes .celda,
+.lugares .celda,
+.herramientas .celda{
+	padding: 0.5em 1% 0.5em 10%;
+	font-size: 15pt;
 }
 input[type="checkbox"]{
 	cursor: pointer;
-	display: none;
 }
-.etiqueta {
-	width: 5em;
-	height: 1em;
-	padding: 4% 8%;
+.formulario .personajes label{
 	display: inline-block;
-	border-radius: 2px;
+	position: relative;
 	cursor: pointer;
+	padding: 5px 10px;
 }
-.etiqueta:after{
-	content: "";
-	width: 10px;
-	height: 10px;
-	display: inline-block;
-	background: none;
-	border: 2px solid white;
-}
-input[type="checkbox"]:checked + label .etiqueta:after{
+.formulario input:checked{
 	display: none;
-	background-color: red;
 }
