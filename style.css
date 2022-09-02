@@ -1,16 +1,21 @@
 body {
 	margin: 0;
     color:white;
-    background-color: black;
+    background-color: lightgrey;
 	text-align: center;
 	text-shadow: 2px 2px 2px brown;
+}
+.inv{
+	color: black;
 }
 h1 {
     color: red;
 	text-decoration: underline;
     
 }
-.container {
+.container,
+.solucion {
+	background-color: black;
 	width: 30%;
 	border: 2px #eee dashed;
 	border-radius: 2px;;
@@ -27,6 +32,10 @@ table {
 }
 td {
 	width: 5em;
+}
+.container,
+.solucion h2{
+	text-decoration: underline;
 }
 .personajes .celda,
 .lugares .celda,
@@ -45,4 +54,9 @@ input[type="checkbox"]{
 }
 .formulario input:checked{
 	display: none;
+}
+.boton {
+	width: 10em;
+	height: 2em;
+	font-size: 15pt;
 }
