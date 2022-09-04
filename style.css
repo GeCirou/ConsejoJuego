@@ -15,8 +15,9 @@ h1 {
 }
 .container,
 .solucion {
-	background-color: black;
+	background-image: linear-gradient(135deg, rgba(0,0,0), rgba(0,0,0,0.7), rgba(0,0,0));
 	width: 75%;
+	max-width: 1400px;
 	border: 2px #eee dashed;
 	border-radius: 2px;;
 	padding: 1% 5% 2%;
@@ -28,12 +29,12 @@ div h3 {
 	text-decoration: underline;
 }
 table {
-	margin: 0 auto;
+	padding: 0em 0.5em;
+	margin: auto;
 }
 td {
 	width: 5em;
 }
-.container,
 .solucion h2{
 	text-decoration: underline;
 }
@@ -42,6 +43,7 @@ td {
 .herramientas .celda{
 	padding: 0.5em 1% 0.5em 10%;
 	font-size: 15pt;
+	margin: auto;
 }
 input[type="checkbox"]{
 	cursor: pointer;
@@ -54,6 +56,10 @@ input[type="checkbox"]{
 }
 .formulario input:checked{
 	display: none;
+}
+.tabla{
+	width: 70%;
+	max-width: 1200px;
 }
 .boton {
 	width: 10em;

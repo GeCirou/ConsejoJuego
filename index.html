@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header></header>
     <h1>¡¡Debes resolver el misterio!!</h1>
     <table>
-        <td class="inv">Investigador: </td>
+        <td id="inv" class="inv">Investigador: </td>
         <td><input type="text"></td>
         <td><button id="guardar">Guardar</button></td><br>
         <label id="investigador"></label>
@@ -19,7 +20,7 @@
             <form action="" class="formulario">
                 <div class="personajes">
                     <h3>Protagonistas:</h3>
-                    <table>
+                    <table class="tabla">
                         <tr>
                             <td class="celda"><label class="etiqueta" for="gato">Gato</label></td>
                             <td><input type="checkbox" class="caja" name="gatoCheck" id="gato"></td>
@@ -70,7 +71,7 @@
                 </div>
                 <div class="lugares">
                     <h3>Lugar:</h3>
-                    <table>
+                    <table class="tabla">
                     <tr>
                         <td class="celda"><label class="etiqueta" for="hall">Hall</label></td>
                         <td><input type="checkbox" name="hallCheck" id="hall"></td>
@@ -104,7 +105,7 @@
                 </div>
                 <div class="herramientas">
                     <h3>Herramientas:</h3>
-                    <table>
+                    <table class="tabla">
                     <tr>
                         <td class="celda"><label class="etiqueta" for="axe">Hacha</label></td>
                         <td><input type="checkbox" name="hachaCheck" id="axe"></td>
@@ -174,5 +175,6 @@
         <p id="solucion"></p>
     </div>    
     <p><button id="reset" class="boton">Reset</button></p>
+    <footer><a href="#inv">Volver al inicio</a></footer>
 </body>
 </html>
