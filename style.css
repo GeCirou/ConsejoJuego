@@ -4,6 +4,11 @@ body {
     background-color: lightgrey;
 	text-align: center;
 }
+header{
+	margin: 0 auto;
+	padding: 1em;
+	background-color: black;
+}
 .inv{
 	color: black;
 }
@@ -16,7 +21,7 @@ h1 {
 .container,
 .solucion {
 	background-image: linear-gradient(135deg, rgba(0,0,0), rgba(0,0,0,0.7), rgba(0,0,0));
-	width: 75%;
+	width: 95%;
 	max-width: 1400px;
 	border: 2px #eee dashed;
 	border-radius: 2px;;
@@ -24,8 +29,12 @@ h1 {
 	margin: 0px auto;
 	position: relative;
 }
+h1{
+	font-size: 30pt;
+}
 .container 
 div h3 {
+	font-size: 20pt;
 	text-decoration: underline;
 }
 table {
@@ -35,14 +44,15 @@ table {
 td {
 	width: 5em;
 }
-.solucion h2{
+h2{
+	font-size: 25pt;
 	text-decoration: underline;
 }
 .personajes .celda,
 .lugares .celda,
 .herramientas .celda{
 	padding: 0.5em 1% 0.5em 10%;
-	font-size: 15pt;
+	font-size: 17pt;
 	margin: auto;
 }
 input[type="checkbox"]{
@@ -61,8 +71,41 @@ input[type="checkbox"]{
 	width: 70%;
 	max-width: 1200px;
 }
-.boton {
+.boton1 {
+	font-size: 12pt;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 2px 2px 3px black;
+}
+.boton2 {
 	width: 10em;
 	height: 2em;
 	font-size: 15pt;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 2px 2px 3px black;
+}
+.boton:active + .invest{
+	display: none;
+}
+.resp{
+	font-size: 15pt;
+}
+.sol{
+	font-size: 17pt;
+	font-weight: bold;
+	color: red;
+}
+footer{
+	margin: 0 auto;
+	padding: 1em;
+	background-color: black;
+}
+footer a{
+	color: white;
+}
+footer a:hover{
+	color: red;
 }

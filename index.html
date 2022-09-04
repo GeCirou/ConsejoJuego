@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header></header>
-    <h1>¡¡Debes resolver el misterio!!</h1>
+    <header><h1>¡¡Debes resolver el misterio!!</h1></header>
     <table>
         <td id="inv" class="inv">Investigador: </td>
-        <td><input type="text"></td>
-        <td><button id="guardar">Guardar</button></td><br>
+        <td><input class="invest" type="text" placeholder="Nombre" oninput="investigador.innerText = this.value" name="investigador"></td>
+        <td><button class="boton1" id="guardar">Guardar</button></td><br>
         <label id="investigador"></label>
     </table>
     <p>
@@ -154,27 +153,27 @@
             <table>
                 <tr>
                     <td>Victima: </td>
-                    <td><input type="text"></td>
+                    <td><input type="text" placeholder="Victima" oninput="victima.innerText = this.value" name="victima"></td>
                 </tr>
                 <tr>
                     <td>Victimario: </td>
-                    <td><input type="text"></td>
+                    <td><input type="text" placeholder="Victimario" oninput="victimario.innerText = this.value" name="victimario"></td>
                 </tr>
                 <tr>
                     <td>Herramienta: </td>
-                    <td><input type="text"></td>
+                    <td><input type="text" placeholder="Herramienta" oninput="herramienta.innerText = this.value" name="herramienta"></td>
                 </tr>
                 <tr>
                     <td>Lugar: </td>
-                    <td><input type="text"></td>
+                    <td><input type="text" placeholder="Lugar" oninput="lugar.innerText = this.value" name="lugar"></td>
                 </tr>
             </table>
             <br>
-            <button id="riesgo" class="boton">Arriesgarse</button>
+            <button id="riesgo" class="boton2">Arriesgarse</button>
         </p>
-        <p id="solucion"></p>
+        <p class="resp"><label class="sol" id="victimario"></label><label> mató a </label><label class="sol" id="victima"></label><label> con </label><label class="sol" id="herramienta"></label><label> en </label><label class="sol" id="lugar"></label><label>.</label> </p>
     </div>    
-    <p><button id="reset" class="boton">Reset</button></p>
+    <p><button type="reset" id="reset" class="boton2">Reset</button></p>
     <footer><a href="#inv">Volver al inicio</a></footer>
 </body>
 </html>
