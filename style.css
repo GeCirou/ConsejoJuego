@@ -3,7 +3,6 @@ body {
     color:white;
     background-color: lightgrey;
 	text-align: center;
-	text-shadow: 2px 2px 2px brown;
 }
 .inv{
 	color: black;
@@ -11,12 +10,13 @@ body {
 h1 {
     color: red;
 	text-decoration: underline;
+	text-shadow: 2px 2px 2px brown;
     
 }
 .container,
 .solucion {
 	background-color: black;
-	width: 30%;
+	width: 75%;
 	border: 2px #eee dashed;
 	border-radius: 2px;;
 	padding: 1% 5% 2%;
