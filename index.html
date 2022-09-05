@@ -11,7 +11,7 @@
         <td id="inv" class="inv">Investigador: </td>
         <td><input class="invest" type="text" placeholder="Nombre" oninput="investigador.innerText = this.value" name="investigador"></td>
         <td><button class="boton1" id="guardar">Guardar</button></td><br>
-        <label id="investigador"></label>
+        <label class="invLbl" id="investigador"></label>
     </table>
     <p>
         <div class="container">
@@ -135,12 +135,6 @@
                         <td class="celda"><label class="etiqueta" for="letri">Letrina</label></td>
                         <td><input type="checkbox" name="letrinaCheck" id="letri"></td>
                     </tr>
-                    <tr>
-                        <td class="celda"><label class="etiqueta" for="micro">Microondas</label></td>
-                        <td><input type="checkbox" name="microCheck" id="micro"></td>
-                        <td class="celda"><label class="etiqueta" for="esca">Escalera</label></td>
-                        <td><input type="checkbox" name="escaCheck" id="esca"></td>
-                    </tr>
                     </table>
                 </div>
             </form>
@@ -152,12 +146,12 @@
             <h2>Solución</h2>
             <table>
                 <tr>
-                    <td>Victima: </td>
-                    <td><input type="text" placeholder="Victima" oninput="victima.innerText = this.value" name="victima"></td>
-                </tr>
-                <tr>
                     <td>Victimario: </td>
                     <td><input type="text" placeholder="Victimario" oninput="victimario.innerText = this.value" name="victimario"></td>
+                </tr>
+                <tr>
+                    <td>Victima: </td>
+                    <td><input type="text" placeholder="Victima" oninput="victima.innerText = this.value" name="victima"></td>
                 </tr>
                 <tr>
                     <td>Herramienta: </td>
@@ -171,7 +165,7 @@
             <br>
             <button id="riesgo" class="boton2">Arriesgarse</button>
         </p>
-        <p class="resp"><label class="sol" id="victimario"></label><label> mató a </label><label class="sol" id="victima"></label><label> con </label><label class="sol" id="herramienta"></label><label> en </label><label class="sol" id="lugar"></label><label>.</label> </p>
+        <p class="resp"><label class="sol" id="victimario">____</label><label> mató a </label><label class="sol" id="victima">____</label><label> con </label><label class="sol" id="herramienta">____</label><label> en </label><label class="sol" id="lugar">____</label><label>.</label> </p>
     </div>    
     <p><button type="reset" id="reset" class="boton2">Reset</button></p>
     <footer><a href="#inv">Volver al inicio</a></footer>
