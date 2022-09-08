@@ -6,8 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>¡¡Debes resolver el misterio!!</h1></header>
-    <div class="reglamento"></div>
+    <header><h1>¡¡El consejo se puso picante!!</h1>
+        <a href="#inv">Planilla</a>
+        <a href="#sol">Solución</a> </header>
+    <div id="reglamento" class="reglamento">
+        <h2>Reglamento</h2>
+        <p>¡Algo pasó! Y lo que parecía una simple reunión de amigos se convirtió en un baño de sangre…<br>
+Tu misión, si decides aceptarla, es descubrir quién fue el asesino y a quién mató. Además tenés que encontrar el arma homicida y dónde sucedió el hecho.<br>
+<br>
+A cada investigador se le dará una planilla de investigación para recabar ahí los datos necesarios.<br> 
+Para preparar el juego deben separar cuatro mazos, dos con los personajes separados por columna, otro con las herramientas y el último con las habitaciones. Se lanzará un dado, si sale impar los asesinos serán los de la 1er columna, si sale par serán los de la 2da. De cada mazo uno de los jugadores debe elegir sin ver una carta que se guardará en el sobre confidencial. La víctima se marcará con la V antes de guardarla en el sobre.
+A continuación se mezclarán todas las cartas y se repartirán entre todos los jugadores. Estos anotarán en su planilla de investigación la información que recibieron.<br>
+<br>
+El primero en jugar será el que menos cartas tenga. En caso de que 2 o más jugadores tengan la misma cantidad de cartas, se definirá quién comienza con una ronda de piedra, papel o tijera.<br>
+Cada jugador en su turno avanzará el número de casilleros que indique el dado en dirección al cuarto al que quiera ir. Luego pasará el turno al jugador de la derecha y así sucesivamente. se entrará al cuarto si el número sacado con un puntaje igual o superior al necesario para llegar. Para utilizar los pasajes secretos, el jugador deberá tirar los dados y sacar un puntaje superior a 7.<br>
+Al entrar en un cuarto el investigador deberá contar en voz alta lo que cree que allí sucedió, detallando quién cometió el crimen, quién es la víctima y cuál fue el arma homicida.<br>
+Una vez finalizada la historia, el jugador de su derecha deberá verificar si entre sus cartas tiene al menos una que refute la sospecha. En caso de tenerla, debe mostrar UNA sola carta al jugador que formuló la sospecha, sin que el resto la vea (si se tiene una carta es obligatorio mostrarla, pero se puede mostrar la misma carta  varias veces).
+Si el jugador de la derecha no tiene ninguna carta incluída en el relato, pasará la pregunta al siguiente jugador y así sucesivamente hasta que se haya mostrado una de las cartas a quien manifestó la sospecha. Luego de corroborar la información pasará el turno al siguiente jugador.<br>
+Los investigadores no podrán quedarse en las habitaciones en turnos sucesivos.<br>
+<br>
+Cuando un investigador esté seguro de que puede resolver el misterio, en su turno (siempre y cuando no haya tirado el dado) puede anotar su solución y abrir el sobre confidencial para mirar las cartas que contiene sin mostrarlas a los demás. Si su solución coincide con el contenido del sobre, declarará que ganó y mostrará las cartas y lo que escribió, de esta manera ganando la partida. Si su solución no coincide, devolverá las cartas al sobre y quedará eliminado. Sus cartas se repartirán entre los otros jugadores.<br>
+<br>
+Lo que pasa en el consejo, queda en el consejo...</p>
+    </div>
     <table>
         <td id="inv" class="inv">Investigador: </td>
         <td><input class="invest" type="text" placeholder="Nombre" oninput="investigador.innerText = this.value" name="investigador"></td>
@@ -22,84 +43,63 @@
                     <h3>Protagonistas:</h3>
                     <table class="tabla">
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="gato">Gato</label></td>
-                            <td><input type="checkbox" class="caja" name="gatoCheck" id="gato"></td>
-                            <td class="celda"><label class="etiqueta" for="tero">Tero</label></td>
-                            <td><input type="checkbox" name="teroCheck" id="tero"></td>
+                            <td><button>Victima</button></td>
+                            <td><button>Victima</button></td>
                         </tr>
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="buey">Buey</label></td>
-                            <td><input type="checkbox" name="bueyCheck" id="buey"></td>
-                            <td class="celda"><label class="etiqueta" for="lorna">Lorna</label></td>
-                            <td><input type="checkbox" name="lorCheck" id="lorna"></td>
+                            <td class="celda"><button class="perso">Gato</button></td>
+                            <td class="celda"><button class="perso">Tero</button></td>
                         </tr>
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="ardilla">Ardilla</label></td>
-                            <td><input type="checkbox" name="ardillaCheck" id="ardilla"></td>
-                            <td class="celda"><label class="etiqueta" for="buho">Búho</label></td>
-                            <td><input type="checkbox" name="buhoCheck" id="buho"></td>
+                            <td class="celda"><button class="perso">Buey</button></td>
+                            <td class="celda"><button class="perso">Lorna</button></td>
                         </tr>
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="lince">Lince</label></td>
-                            <td><input type="checkbox" name="linceCheck" id="lince"></td>
-                            <td class="celda"><label class="etiqueta" for="panter">Pantera</label></td>
-                            <td><input type="checkbox" name="panterCheck" id="panter"></td>
+                            <td class="celda"><button class="perso">Ardilla</button></td>
+                            <td class="celda"><button class="perso">Búho</button></td>
                         </tr>
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="orca">Orca</label></td>
-                            <td><input type="checkbox" name="orcaCheck" id="orca"></td>
-                            <td class="celda"><label class="etiqueta" for="cigu">Cigüeña</label></td>
-                            <td><input type="checkbox" name="ciguCheck" id="cigu"></td>
+                            <td class="celda"><button class="perso">Lince</button></td>
+                            <td class="celda"><button class="perso">Pantera</button></td>
                         </tr>
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="tibu">Tiburón</label></td>
-                            <td><input type="checkbox" name="tibuCheck" id="tibu"></td>
-                            <td class="celda"><label class="etiqueta" for="edi">Edith</label></td>
-                            <td><input type="checkbox" name="ediCheck" id="edi"></td>
+                            <td class="celda"><button class="perso">Orca</button></td>
+                            <td class="celda"><button class="perso">Cigüeña</button></td>
                         </tr>
                         <tr>
-                            <td class="celda"><label class="etiqueta" for="oso">Oso</label></td>
-                            <td><input type="checkbox" name="osoCheck" id="oso"></td>
-                            <td class="celda"><label class="etiqueta" for="llama">Llama</label></td>
-                            <td><input type="checkbox" name="llamaCheck" id="llama"></td>
+                            <td class="celda"><button class="perso">Tiburón</button></td>
+                            <td class="celda"><button class="perso">Edith</button></td>
                         </tr>
-                            <td class="celda"><label class="etiqueta" for="fonti">Fonti</label></td>
-                            <td><input type="checkbox" name="fontiCheck" id="fonti"></td>
-                            <td class="celda"><label class="etiqueta" for="clau">Claudia</label></td>
-                            <td><input type="checkbox" name="clauCheck" id="clau"></td>
+                        <tr>
+                            <td class="celda"><button class="perso">Oso</button></td>
+                            <td class="celda"><button class="perso">Llama</button></td>
+                        </tr>
+                            <td class="celda"><button class="perso">Fonti</button></td>
+                            <td class="celda"><button class="perso">Claudia</button></td>
                     </table>
                 </div>
                 <div class="lugares">
                     <h3>Lugar:</h3>
                     <table class="tabla">
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="hall">Hall</label></td>
-                        <td><input type="checkbox" name="hallCheck" id="hall"></td>
-                        <td class="celda"><label class="etiqueta" for="lounge">Sala de estar</label></td>
-                        <td><input type="checkbox" name="loungeCheck" id="lounge"></td>
+                        <td class="celda"><button class="lug">Hall</button></td>
+                        <td class="celda"><button class="lug">Sala de estar</button></td>
                     </tr>
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="dine">Comedor</label></td>
-                        <td><input type="checkbox" name="dineCheck" id="dine"></td>
-                        <td class="celda"><label class="etiqueta" for="kit">Cocina</label></td>
-                        <td><input type="checkbox" name="kitchCheck" id="kit"></td>
+                        <td class="celda"><button class="lug">Comedor</button></td>
+                        <td class="celda"><button class="lug">Cocina</button></td>
                     </tr>
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="ball">Salón de baile</label></td>
-                        <td><input type="checkbox" name="ballCheck" id="ball"></td>
-                         <td class="celda"><label class="etiqueta" for="cons">Jardín de invierno</label></td>
-                         <td><input type="checkbox" name="consCheck" id="cons"></td>
+                        <td class="celda"><button class="lug">Salón de baile</button></td>
+                         <td class="celda"><button class="lug">Jardín de invierno</button></td>
                     </tr>
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="bill">Sala de billar</label></td>
-                        <td><input type="checkbox" name="billCheck" id="bill"></td>
-                        <td class="celda"><label class="etiqueta" for="lib">Biblioteca</label></td>
-                        <td><input type="checkbox" name="libCheck" id="lib"></td>
+                        <td class="celda"><button class="lug">Sala de billar</button></td>
+                        <td class="celda"><button class="lug">Biblioteca</button></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td class="celda"><label class="etiqueta" for="study">Estudio</label></td>
-                        <td><input type="checkbox" name="studyCheck" id="study"></td>
+                        <td class="celda"><button class="lug">Estudio</button></td>
                     </tr>
                     </table>
                 </div>
@@ -107,34 +107,24 @@
                     <h3>Herramientas:</h3>
                     <table class="tabla">
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="axe">Hacha</label></td>
-                        <td><input type="checkbox" name="hachaCheck" id="axe"></td>
-                        <td class="celda"><label class="etiqueta" for="nava">Navaja</label></td>
-                        <td><input type="checkbox" name="navajaCheck" id="nava"></td>
+                        <td class="celda"><button class="herr">Hacha</button></td>
+                        <td class="celda"><button class="herr">Navaja</button></td>
                     </tr>
                     <tr>
-                         <td class="celda"><label class="etiqueta" for="soga">Soga</label></td>
-                         <td><input type="checkbox" name="sogaCheck" id="soga"></td>
-                        <td class="celda"><label class="etiqueta" for="fuego">Fogón</label></td>
-                        <td><input type="checkbox" name="fuegoCheck" id="fuego"></td>
+                         <td class="celda"><button class="herr">Soga</button></td>
+                        <td class="celda"><button class="herr">Fogón</button></td>
                     </tr>
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="pala">Pala</label></td>
-                        <td><input type="checkbox" name="palaCheck" id="pala"></td>
-                        <td class="celda"><label class="etiqueta" for="lob">Lobato</label></td>
-                        <td><input type="checkbox" name="lobatoCheck" id="lob"></td>
+                        <td class="celda"><button class="herr">pala</button></td>
+                        <td class="celda"><button class="herr">Lobato</button></td>
                     </tr>
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="cuch">Cucharón</label></td>
-                        <td><input type="checkbox" name="cucharaCheck" id="cuch"></td>
-                        <td class="celda"><label class="etiqueta" for="cajon">Cajón de patrulla</label></td>
-                        <td><input type="checkbox" name="cajonCheck" id="cajon"></td>
+                        <td class="celda"><button class="herr">Cucharón</button></td>
+                        <td class="celda"><button class="herr">Cajón de patrulla</button></td>
                     </tr>
                     <tr>
-                        <td class="celda"><label class="etiqueta" for="garra">Garrafa</label></td>
-                        <td><input type="checkbox" name="garrafaCheck" id="garra"></td>
-                        <td class="celda"><label class="etiqueta" for="letri">Letrina</label></td>
-                        <td><input type="checkbox" name="letrinaCheck" id="letri"></td>
+                        <td class="celda"><button class="herr">Garrafa</button></td>
+                        <td class="celda"><button class="herr">Letrina</button></td>
                     </tr>
                     </table>
                 </div>
@@ -142,7 +132,7 @@
         <br>
     </div>
     </p>
-    <div class="solucion">
+    <div id="sol" class="solucion">
         <p>
             <h2>Solución</h2>
             <table>
@@ -169,6 +159,8 @@
         <p class="resp"><label class="sol" id="victimario">____</label><label> mató a </label><label class="sol" id="victima">____</label><label> con </label><label class="sol" id="herramienta">____</label><label> en </label><label class="sol" id="lugar">____</label><label>.</label> </p>
     </div>    
     <p><button type="reset" id="reset" class="boton2">Reset</button></p>
-    <footer><a href="#inv">Volver al inicio</a></footer>
+    <footer>
+        <a href="#reglamento">Reglamento</a>
+        <a href="#inv">Planilla</a></footer>
 </body>
 </html>
