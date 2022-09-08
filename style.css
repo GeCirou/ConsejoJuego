@@ -64,20 +64,6 @@ h2{
 	font-size: 17pt;
 	margin: auto;
 }
-input[type="checkbox"]{
-	cursor: pointer;
-}
-.formulario .personajes label,
-.formulario .lugares label,
-.formulario .herramientas label{
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-	padding: 5px 10px;
-}
-.formulario input:checked{
-	display: none;
-}
 .tabla{
 	width: 70%;
 	max-width: 1200px;
