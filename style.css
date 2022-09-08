@@ -1,23 +1,22 @@
 body {
 	margin: 0;
     color:white;
-    background-color: rgb(156, 153, 153);
+    background-color: rgb(3, 77, 51);
 	text-align: center;
 }
+
 header{
 	width: 100%;
 	margin: 0 auto;
 	padding: 1em;
 	background-color: rgb(3, 77, 51);
 }
-.inv{
-	color: black;
+header a{
+	color: gold;
+	font-size: 17pt;
 }
-.invLbl{
-	color: black;
-	font-size: 25pt;
-	font-weight: bold;
-
+header a:hover{
+	color: rgb(249, 233, 138);
 }
 h1 {
     color: gold;
@@ -25,6 +24,20 @@ h1 {
 	text-shadow: 2px 2px 2px brown;
     
 }
+
+/* etiqueta investigador */
+.inv{
+	font-size: 15pt;
+	color: gold;
+}
+.invLbl{
+	color: black;
+	font-size: 25pt;
+	font-weight: bold;
+
+}
+
+/* contenedores de elementos */
 .reglamento,
 .container,
 .solucion {
@@ -57,6 +70,7 @@ h2{
 	font-size: 25pt;
 	text-decoration: underline;
 }
+/* celdas de botones */
 .personajes .celda,
 .lugares .celda,
 .herramientas .celda{
@@ -67,7 +81,9 @@ h2{
 .tabla{
 	width: 70%;
 	max-width: 1200px;
+	position: relative;
 }
+/* boton guardar */
 .boton1 {
 	font-size: 12pt;
 	cursor: pointer;
@@ -75,6 +91,54 @@ h2{
 	border: 1px solid black;
 	box-shadow: 2px 2px 3px black;
 }
+/* botones de seleccion */
+.plan{
+	font-size: 20pt;
+	font-weight: bold;
+	width: 12em;
+	height: 5em;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 2px 2px 3px black;
+	background-color: silver;
+	color: black;
+	transition: transform 0.3s ease;
+}
+.plan::after, .plan::before{
+	content: "";
+	opacity: 0.3;
+	background-color: silver;
+	border-radius: inherit;
+	width: inherit;
+	height: inherit;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: transform 0.3s ease;
+	position: absolute;
+}
+.plan:hover{
+	color: white;
+	background-color: rgb(152, 152, 152);
+	transform: translate(-10px, -10px);
+}
+.plan:hover::after{
+	transform: translate(5px, 5px);
+}
+.plan:hover::before{
+	transform: translate(10px, 10px);
+}
+.plan:focus{
+	background-color: rgb(245, 86, 86);
+	color: white;
+	text-decoration: line-through;
+}
+/*.celda a:active{
+	color: grey;
+}*/
+/* boton reset */
 .boton2 {
 	width: 10em;
 	height: 2em;
@@ -88,26 +152,26 @@ h2{
 .boton2:hover{
 	background-color: rgb(192, 174, 128);
 }
-.boton:active + .invest{
-	display: none;
-}
 .resp{
-	font-size: 15pt;
+	font-size: 17pt;
 }
+
 .sol{
 	font-size: 17pt;
 	font-weight: bold;
 	color: gold;
 }
+/* footer */
 footer{
 	width: 100%;
 	margin: 0 auto;
-	padding: 1em;
-	background-color: black;
+	padding: 2em;
+	background-color: rgb(3, 77, 51);
 }
 footer a{
-	color: white;
+	font-size: 17pt;
+	color: gold;
 }
 footer a:hover{
-	color: gold;
+	color: rgb(249, 233, 138);
 }

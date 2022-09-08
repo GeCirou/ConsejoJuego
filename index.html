@@ -7,8 +7,14 @@
 </head>
 <body>
     <header><h1>¡¡El consejo se puso picante!!</h1>
-        <a href="#inv">Planilla</a>
-        <a href="#sol">Solución</a> </header>
+        <table>
+            <tr>
+                <td><a href="#inv">Planilla</a></td>
+                <td></td>
+                <td><a href="#sol">Solución</a> </header></td>
+            </tr>
+        </table>
+    </header>
     <div id="reglamento" class="reglamento">
         <h2>Reglamento</h2>
         <p>¡Algo pasó! Y lo que parecía una simple reunión de amigos se convirtió en un baño de sangre…<br>
@@ -43,8 +49,8 @@ Lo que pasa en el consejo, queda en el consejo...</p>
                     <h3>Protagonistas:</h3>
                     <table class="tabla">
                         <tr>
-                            <td><button>Victima</button></td>
-                            <td><button>Victima</button></td>
+                            <td class="celda"><a id="v1" href="#v1" class="plan">Victima</a></td>
+                            <td class="celda"><a id="v2" href="#v2" class="plan">Victima</a></td>
                         </tr>
                         <tr>
                             <td class="celda"><button class="plan">Gato</button></td>
@@ -98,7 +104,6 @@ Lo que pasa en el consejo, queda en el consejo...</p>
                         <td class="celda"><button class="plan">Biblioteca</button></td>
                     </tr>
                     <tr>
-                        <td></td>
                         <td class="celda"><button class="plan">Estudio</button></td>
                     </tr>
                     </table>
@@ -160,7 +165,12 @@ Lo que pasa en el consejo, queda en el consejo...</p>
     </div>    
     <p><button type="reset" id="reset" class="boton2">Reset</button></p>
     <footer>
-        <a href="#reglamento">Reglamento</a>
-        <a href="#inv">Planilla</a></footer>
+        <table>
+            <tr><td><a href="#reglamento">Reglamento</a></td>
+                <td></td>
+                <td><a href="#inv">Planilla</a></td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>
