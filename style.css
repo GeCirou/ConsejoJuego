@@ -1,19 +1,26 @@
 body {
 	margin: 0;
     color:white;
-    background-color: lightgrey;
+    background-color: rgb(156, 153, 153);
 	text-align: center;
 }
 header{
+	width: 100%;
 	margin: 0 auto;
 	padding: 1em;
-	background-color: black;
+	background-color: rgb(3, 77, 51);
 }
 .inv{
 	color: black;
 }
+.invLbl{
+	color: black;
+	font-size: 25pt;
+	font-weight: bold;
+
+}
 h1 {
-    color: red;
+    color: gold;
 	text-decoration: underline;
 	text-shadow: 2px 2px 2px brown;
     
@@ -21,11 +28,11 @@ h1 {
 .reglamento,
 .container,
 .solucion {
-	background-image: linear-gradient(135deg, rgba(0,0,0), rgba(0,0,0,0.7), rgba(0,0,0));
+	background-image: linear-gradient(135deg, rgb(3, 77, 51), rgb(23, 95, 25));
 	width: 95%;
 	max-width: 1400px;
 	border: 2px #eee dashed;
-	border-radius: 2px;;
+	border-radius: 20px;;
 	padding: 1% 5% 2%;
 	margin: 0px auto;
 	position: relative;
@@ -39,6 +46,7 @@ div h3 {
 	text-decoration: underline;
 }
 table {
+	width: fit-content;
 	padding: 0em 0.5em;
 	margin: auto;
 }
@@ -59,7 +67,9 @@ h2{
 input[type="checkbox"]{
 	cursor: pointer;
 }
-.formulario .personajes label{
+.formulario .personajes label,
+.formulario .lugares label,
+.formulario .herramientas label{
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
@@ -88,6 +98,10 @@ input[type="checkbox"]{
 	border: 1px solid black;
 	box-shadow: 2px 2px 3px black;
 }
+.boton1:hover,
+.boton2:hover{
+	background-color: rgb(192, 174, 128);
+}
 .boton:active + .invest{
 	display: none;
 }
@@ -97,9 +111,10 @@ input[type="checkbox"]{
 .sol{
 	font-size: 17pt;
 	font-weight: bold;
-	color: red;
+	color: gold;
 }
 footer{
+	width: 100%;
 	margin: 0 auto;
 	padding: 1em;
 	background-color: black;
@@ -108,5 +123,5 @@ footer a{
 	color: white;
 }
 footer a:hover{
-	color: red;
+	color: gold;
 }
