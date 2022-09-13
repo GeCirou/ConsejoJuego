@@ -1,4 +1,5 @@
 body {
+	font-family: 'Playfair Display', serif;
 	margin: 0;
     color:white;
     background-color: rgb(3, 77, 51);
@@ -8,8 +9,7 @@ body {
 header{
 	width: 100%;
 	margin: 0 auto;
-	padding: 1em;
-	background-color: rgb(3, 77, 51);
+	padding:0.5em 1em;
 }
 header a{
 	color: gold;
@@ -18,157 +18,87 @@ header a{
 header a:hover{
 	color: rgb(249, 233, 138);
 }
-h1 {
-    color: gold;
-	text-decoration: underline;
-	text-shadow: 2px 2px 2px brown;
-    
+
+/* links */
+.link{
+	font-size: 2em;
+	color: gold;
+}
+.link:hover{
+	color: rgb(249, 233, 138);
 }
 
 /* etiqueta investigador */
 .inv{
-	font-size: 15pt;
+	font-size: 2em;
 	color: gold;
 }
 .invLbl{
-	color: black;
-	font-size: 25pt;
+	color: gold;
+	font-size: 4em;
 	font-weight: bold;
 
+}
+.invest{
+	font-size: 2em;
 }
 
 /* contenedores de elementos */
 .reglamento,
 .container,
 .solucion {
-	background-image: linear-gradient(135deg, rgb(0,0,0), rgb(0,0,0,.5), rgb(0,0,0));
+	background-image: linear-gradient(135deg, rgb(0,0,0), rgb(0,0,0,.3), rgb(0,0,0));
 	width: 95%;
-	max-width: 1400px;
+	max-width: 1000px;
 	border: 2px #eee dashed;
 	border-radius: 20px;;
-	padding: 1% 5% 2%;
 	margin: 0px auto;
-	position: relative;
+	padding: 20px 30px;
 }
+
+/* h tags */
 h1{
-	font-size: 30pt;
+	font-size: 5em;
+	color: gold;
+	text-decoration: underline;
+	text-shadow: 2px 2px 2px brown;
 }
-.container 
-div h3 {
-	font-size: 20pt;
+h2{
+	font-size: 4em;
+	text-decoration: underline;
+}
+h3 {
+	font-size: 3em;
 	text-decoration: underline;
 }
 table {
-	width: fit-content;
-	padding: 0em 0.5em;
 	margin: auto;
 }
 td {
-	width: 5em;
+	width: 1.5em;
 }
-h2{
-	font-size: 25pt;
-	text-decoration: underline;
-}
-/* celdas de botones */
+
+/* celdas de botones*/
 .personajes .celda,
 .lugares .celda,
 .herramientas .celda{
-	padding: 0.5em 1% 0.5em 10%;
-	font-size: 17pt;
+	font-size: 2.5em;
 	margin: auto;
 }
 .tabla{
-	width: 70%;
-	max-width: 1200px;
 	position: relative;
 }
-/* boton guardar */
-.boton1 {
-	font-size: 12pt;
-	cursor: pointer;
-	border-radius: 5px;
-	border: 1px solid black;
-	box-shadow: 2px 2px 3px black;
-}
-/* botones de seleccion */
-.plan{
-	font-size: 20pt;
-	font-weight: bold;
-	width: 12em;
-	height: 5em;
-	padding: 10px 15px;
-	cursor: pointer;
-	border-radius: 5px;
-	border: 1px solid black;
-	box-shadow: 2px 2px 3px black;
-	background-color: silver;
-	color: black;
-	transition: transform 0.3s ease;
-}
-.plan::after, .plan::before{
-	content: "";
-	opacity: 0.3;
-	background-color: silver;
-	border-radius: inherit;
-	width: inherit;
-	height: inherit;
-	left: 0;
-	bottom: 0;
-	z-index: -1;
-	transition: transform 0.3s ease;
-	position: absolute;
-}
-.plan:hover{
-	color: white;
-	background-color: rgb(152, 152, 152);
-	transform: translate(-10px, -10px);
-}
-.plan:hover::after{
-	transform: translate(5px, 5px);
-}
-.plan:hover::before{
-	transform: translate(10px, 10px);
-}
-.plan:focus{
-	background-color: rgb(245, 86, 86);
-	color: white;
-	text-decoration: line-through;
-}
-/*.celda a:active{
-	color: grey;
-}*/
-/* boton reset */
-.boton2 {
-	width: 10em;
-	height: 2em;
-	font-size: 15pt;
-	cursor: pointer;
-	border-radius: 5px;
-	border: 1px solid black;
-	box-shadow: 2px 2px 3px black;
-}
-.boton1:hover,
-.boton2:hover{
-	background-color: rgb(192, 174, 128);
-}
-.resp{
-	font-size: 17pt;
-}
 
-.sol{
-	font-size: 17pt;
-	font-weight: bold;
-	color: gold;
-}
 /* labels victima */
 .celda input[type="checkbox"]{
 	display: none;
 }
 .victLbl{
+	width: 7em;
+	height: 1.5em;
 	background-color: rgba(0,0,0,0.2);
 	color: #FFF;
-	padding: 5px 15px 5px 51px;
+	padding: 5px 15px 5px 70px;
 	display: inline-block;
 	position: relative;
 	font-size: 1em;
@@ -180,15 +110,15 @@ h2{
 .victLbl:after,
 .victLbl:before {
 	content: "";
-	width: 17px;
-	height: 17px;
+	width: 20px;
+	height: 20px;
 	display: inline-block;
 	background-color: rgba(0,0,0,0.1);
-	border: 3px solid white;
+	border: 3px solid red;
 	border-radius: 20%;
 	position: absolute;
-	left: 17px;
-	top: 2px;
+	left: 15px;
+	top: 15px;
 	z-index: -1;
 	transition: transform 0.3s ease;
 }
@@ -213,17 +143,34 @@ transform: translate(12px, 12px);
 .victChk:checked + .victLbl:before{
 	display: none;
 }
+.sep{
+	width: 7em;
+	height: 2em;
+}
+
+/* solucion */
+.solTabla{
+	font-size: 1.5em;
+}
+.resp{
+	font-family: 'Dancing Script', cursive;
+	font-size: 3em;
+}
+.sol{
+	font-family: 'Dancing Script', cursive;
+	font-weight: bold;
+	color: gold;
+}
+
+
+/* reglamento */
+.reglamento{
+	font-size: 1.5em;
+}
+
 /* footer */
 footer{
 	width: 100%;
 	margin: 0 auto;
 	padding: 2em;
-	background-color: rgb(3, 77, 51);
-}
-footer a{
-	font-size: 17pt;
-	color: gold;
-}
-footer a:hover{
-	color: rgb(249, 233, 138);
 }

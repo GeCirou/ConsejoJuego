@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>El consejo se descontroló</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header><h1>¡¡El consejo se puso picante!!</h1>
         <table>
             <tr>
-                <td><a href="#reg">Reglamento</a></td>
+                <td><a class="link" href="#reg">Reglamento</a></td>
                 <td></td>
-                <td><a href="#sol">Solución</a> </header></td>
+                <td><a class="link" href="#sol">Solución</a> </header></td>
             </tr>
         </table>
     </header>
     <table>
         <td id="inv" class="inv">Investigador: </td>
         <td><input class="invest" type="text" placeholder="Nombre" oninput="investigador.innerText = this.value" name="investigador"></td>
-        <td><button class="boton1" id="guardar">Guardar</button></td><br>
+        <br>
         <label class="invLbl" id="investigador"></label>
     </table>
     <p>
@@ -35,6 +38,11 @@
                             <td class="celda">
                                 <input class="victChk" type="checkbox" name="checkbox" id="vict2">
                                 <label class="victLbl" for="vict2">Victima</label></td>
+                        </tr>
+                        <tr>
+                            <td class="sep"><label> </label></td>
+                            <td></td>
+                            <td><label class="sep"> </label></td>
                         </tr>
                         <tr>
                             <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="gato">
@@ -161,28 +169,28 @@
             <h2>Solución</h2>
             <table>
                 <tr>
-                    <td>Victimario: </td>
-                    <td><input type="text" placeholder="Victimario" oninput="victimario.innerText = this.value" name="victimario"></td>
+                    <td class="solTabla">Victimario: </td>
+                    <td><input class="solTabla" type="text" placeholder="Victimario" oninput="victimario.innerText = this.value" name="victimario"></td>
                 </tr>
                 <tr>
-                    <td>Victima: </td>
-                    <td><input type="text" placeholder="Victima" oninput="victima.innerText = this.value" name="victima"></td>
+                    <td class="solTabla">Victima: </td>
+                    <td><input class="solTabla" type="text" placeholder="Victima" oninput="victima.innerText = this.value" name="victima"></td>
                 </tr>
                 <tr>
-                    <td>Herramienta: </td>
-                    <td><input type="text" placeholder="Herramienta" oninput="herramienta.innerText = this.value" name="herramienta"></td>
+                    <td class="solTabla">Herramienta: </td>
+                    <td><input class="solTabla" type="text" placeholder="Herramienta" oninput="herramienta.innerText = this.value" name="herramienta"></td>
                 </tr>
                 <tr>
-                    <td>Lugar: </td>
-                    <td><input type="text" placeholder="Lugar" oninput="lugar.innerText = this.value" name="lugar"></td>
+                    <td class="solTabla">Lugar: </td>
+                    <td><input class="solTabla" type="text" placeholder="Lugar" oninput="lugar.innerText = this.value" name="lugar"></td>
                 </tr>
             </table>
             <br>
-            <button id="riesgo" class="boton2">Arriesgarse</button>
         </p>
         <p class="resp"><label class="sol" id="victimario">____</label><label> mató a </label><label class="sol" id="victima">____</label><label> con </label><label class="sol" id="herramienta">____</label><label> en </label><label class="sol" id="lugar">____</label><label>.</label> </p>
     </div>    
-    <p><button type="reset" id="reset" class="boton2">Reset</button></p>
+    <p></p>
+    <p></p>
     <div id="reg" class="reglamento">
         <h2>Reglamento</h2>
         <p>¡Algo pasó! Y lo que parecía una simple reunión de amigos se convirtió en un baño de sangre…<br>
@@ -205,9 +213,9 @@ Lo que pasa en el consejo, queda en el consejo...</p>
     </div>
     <footer>
         <table>
-            <tr><td><a href="#inv">Planilla</a></td>
+            <tr><td><a class="link" href="#inv">Planilla</a></td>
                 <td></td>
-                <td><a href="#sol">Solución</a></td>
+                <td><a class="link" href="#sol">Solución</a></td>
             </tr>
         </table>
     </footer>
