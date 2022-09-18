@@ -93,7 +93,7 @@ td {
 .celda input[type="checkbox"]{
 	display: none;
 }
-.victLbl{
+.victLbl {
 	width: 7em;
 	height: 1.5em;
 	background-color: rgba(0,0,0,0.2);
@@ -104,7 +104,6 @@ td {
 	font-size: 1em;
 	border-radius: 10px;
 	cursor: pointer;
-	transition: transform 0.3s ease;
 }
 
 .victLbl:after,
@@ -120,17 +119,18 @@ td {
 	left: 15px;
 	top: 15px;
 	z-index: -1;
-	transition: transform 0.3s ease;
 }
 
 .victLbl:hover {
 	background-color: rgba(0, 116, 217,0.1);
-	transform: translate(-12px, -12px);
+	animation: mover 0.3s linear;
+	animation-delay: -.1s;
+	animation-iteration-count: 1;
 }
-.victLbl:hover:after{
+.victLbl:hover:after {
 transform: translate(6px, 6px);	
 }
-.victLbl:hover:before{
+.victLbl:hover:before {
 transform: translate(12px, 12px);	
 }
 .victChk:checked + .victLbl{
@@ -140,12 +140,23 @@ transform: translate(12px, 12px);
 	color: #000;
 	text-decoration: line-through;
 }
+
 .victChk:checked + .victLbl:before{
 	display: none;
 }
 .sep{
 	width: 7em;
 	height: 2em;
+}
+
+@keyframes mover {
+	50% {
+		font-size: 1.2em;
+		width: 9em;
+		height: 2em;
+		background-color: pink;
+		color: black;
+	}
 }
 
 /* solucion */
