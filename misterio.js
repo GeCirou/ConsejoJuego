@@ -1,4 +1,4 @@
-var vict1 = document.getElementById("vict1");
+var vict1 = document.getElementById(vict1);
 var vict2 = document.getElementById("vict2");
 
 var gato = document.getElementById("gato");
@@ -52,12 +52,23 @@ console.log(col2);
 console.log(herramienta);
 console.log(lugar);
 
-if (vict1) {
+function victim(vict1, vict2){
+    if (vict1 === true) {
     console.log("funca");
     victima = col1;
     asesino = col2;
+    return vict2 = false;
     
+    }
+    if (vict2 === true) {
+        console.log("funca");
+        victima = col2;
+        asesino = col1;
+        return vict1 = false;
+    }
+
 }
+
 
     
 const solucion = {
@@ -66,3 +77,5 @@ const solucion = {
     herramienta: "",
     lugar: "",
 };
+
+victim(vict1, vict2);
