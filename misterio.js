@@ -1,4 +1,4 @@
-var vict1 = document.getElementById(vict1);
+var vict1 = document.getElementById("vict1");
 var vict2 = document.getElementById("vict2");
 
 var gato = document.getElementById("gato");
@@ -40,36 +40,19 @@ var garrafa = document.getElementById("garrafa");
 var letrina = document.getElementById("letrina");
 
 var investigador = "";
-var col1 = ["Gato", "Buey", "Ardilla", "Lince", "Orca", "Tiburón", "Oso", "Fonti"];
-var col2 = ["Tero", "Lorna", "Búho", "Pantera", "Cigüeña", "Edith", "Llama", "Claudia"];
+var col1 = 0;
+var col2 = 0;
 var victima = [];
 var asesino = [];
-var herramienta = ["Hacha", "Navaja", "Soga", "Fogón", "Pala", "Lobato", "Cucharón", "Cajón de patrulla", "Garrafa", "Letrina"];
-var lugar = ["Hall", "Sala de estar", "Comedor", "Cocina", "Salón de baile", "Jardín de invierno", "Sala de billar", "Biblioteca", "Estudio"];
+var herramienta = 0;
+var lugar = 0;
 
-console.log(col1);
-console.log(col2);
-console.log(herramienta);
-console.log(lugar);
-
-function victim(vict1, vict2){
-    if (vict1 === true) {
-    console.log("funca");
-    victima = col1;
-    asesino = col2;
-    return vict2 = false;
-    
-    }
-    if (vict2 === true) {
-        console.log("funca");
-        victima = col2;
-        asesino = col1;
-        return vict1 = false;
-    }
-
+function victim1(){
+    document.getElementById("victLbl2").style.display = 'none';
 }
-
-
+function victim2(){
+    document.getElementById("victLbl1").style.display = 'none';
+}
     
 const solucion = {
     victima: "",
@@ -77,5 +60,3 @@ const solucion = {
     herramienta: "",
     lugar: "",
 };
-
-victim(vict1, vict2);
