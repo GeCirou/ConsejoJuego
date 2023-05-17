@@ -1,3 +1,5 @@
+var invBoton = investigadorButton = getElementById("investigador--boton");
+
 var vict1 = document.getElementById("vict1");
 var vict2 = document.getElementById("vict2");
 
@@ -39,7 +41,6 @@ var cajon = document.getElementById("cajon");
 var garrafa = document.getElementById("garrafa");
 var letrina = document.getElementById("letrina");
 
-var investigador = "";
 var col1 = 0;
 var col2 = 0;
 var victima = [];
@@ -47,11 +48,26 @@ var asesino = [];
 var herramienta = 0;
 var lugar = 0;
 
+function investigadorBoton() {
+    document.getElementById("investigador--input").style.display = 'none';
+}
+
 function victim1(){
     document.getElementById("victLbl2").style.display = 'none';
 }
 function victim2(){
     document.getElementById("victLbl1").style.display = 'none';
+}
+
+function sospechoso() {
+    alert("Fui yo?")
+}
+
+function donde(){
+    alert("Acá?");
+}
+function herramienta(){
+    alert("Con esto?");
 }
     
 const solucion = {
@@ -60,3 +76,6 @@ const solucion = {
     herramienta: "",
     lugar: "",
 };
+function solucionBoton() {
+    document.getElementById("solucion--div").style.display = 'none';
+}

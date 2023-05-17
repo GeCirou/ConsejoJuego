@@ -2,6 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página armada para usar como planilla en un juego de Clue modificado.">
     <title>El consejo se descontroló</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,215 +13,425 @@
     <script src="misterio.js"></script>
 </head>
 <body>
-    <header><h1>¡¡El consejo se puso picante!!</h1>
-        <table>
-            <tr>
-                <td><a class="link" href="#reg">Reglamento</a></td>
-                <td></td>
-                <td><a class="link" href="#sol">Solución</a> </header></td>
-            </tr>
-        </table>
-    </header>
-    <table>
-        <td id="inv" class="inv">Investigador: </td>
-        <td><input class="invest" type="text" placeholder="Nombre" oninput="investigador.innerText = this.value" name="investigador"></td>
-        <br>
-        <label class="invLbl" id="investigador"></label>
-    </table>
-    <p>
-        <div class="container">
-            <h2>Planilla de investigación</h2>
-            <form action="" class="formulario">
-                <div class="personajes">
-                    <h3>Protagonistas:</h3>
-                    <table class="tabla">
+    <main>
+        <header>
+            <h1>¡¡El consejo se puso picante!!</h1>
+            <ul class="main-nav">
+                <li>
+                    <a class="link" href="#reg">Reglamento</a>
+                </li>
+                <li>
+                    <a class="link" href="#sol">Solución</a>
+                </li>
+            </ul>
+        </header>
+        <section class="main-investigador">
+            <div id="investigador--input">
+                <span class="main-span">Investigador: </span>
+                <input class="invest" type="text" placeholder="Nombre" oninput="investigador_name.innerText = this.value" name="investigador">
+                <input type="button" value="Guardar" class="boton" id="investigador--boton" onclick='investigadorBoton()'>
+            </div>
+        </section>
+        <section class="main-investigador--label">
+            <label class="invLbl" id="investigador_name"></label>
+        </section>
+        <section id="plan" class="container">
+            <div class="section-title"><h2>Planilla de investigación</h2></div>
+            <div class="section1-div1">
+                <h3>Protagonistas:</h3>
+                <div class="section1-subdiv1--table_container">
+                    <table>
                         <tr>
-                            <td class="celda">
-                                <input class="victChk" type="checkbox" name="checkbox" id="vict1" onclick="victim1()">
-                                <label class="victLbl" for="vict1" id="victLbl1">Victima</label></td>
-                            <td class="celda">
-                                <input class="victChk" type="checkbox" name="checkbox" id="vict2" onclick="victim2()">
-                                <label class="victLbl" for="vict2" id="victLbl2">Victima</label></td>
+                            <td class="subdiv1-table--cell" id="cellVict1">
+                                <label class="victLbl" for="vict1" id="victLbl1">
+                                    <span>Victima</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="vict1" onclick="victim1()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="vict2" id="victLbl2">
+                                    <span>Victima</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="vict2" onclick="victim2()">
+                                </label>
+                            </td>
                         </tr>
-                        <tr>
-                            <td class="sep"><label> </label></td>
-                            <td></td>
-                            <td><label class="sep"> </label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="gato">
-                                <label class="victLbl" for="gato">Gato</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="tero">
-                                <label class="victLbl" for="tero">Tero</label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="buey">
-                                <label class="victLbl" for="buey">Buey</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="lor">
-                                <label class="victLbl" for="lor">Lorna</label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="ardilla">
-                                <label class="victLbl" for="ardilla">Ardilla</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="buho">
-                                <label class="victLbl" for="buho">Búho</label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="lince">
-                                <label class="victLbl" for="lince">Lince</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="pantera">
-                                <label class="victLbl" for="pantera">Pantera</label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="orca">
-                                <label class="victLbl" for="orca">Orca</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="cigu">
-                                <label class="victLbl" for="cigu">Cigüeña</label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="tibu">
-                                <label class="victLbl" for="tibu">Tiburón</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="edi">
-                                <label class="victLbl" for="edi">Edith</label></td>
-                        </tr>
-                        <tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="oso">
-                                <label class="victLbl" for="oso">Oso</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="llama">
-                                <label class="victLbl" for="llama">Llama</label></td>
-                        </tr>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="fonti">
-                                <label class="victLbl" for="fonti">Fonti</label></td>
-                            <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="clau">
-                                <label class="victLbl" for="clau">Claudia</label></td>
                     </table>
                 </div>
-                <div class="lugares">
-                    <h3>Lugar:</h3>
-                    <table class="tabla">
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="hall">
-                                <label class="victLbl" for="hall">Hall</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="lounge">
-                                <label class="victLbl" for="lounge">Sala de estar</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="dinner">
-                                <label class="victLbl" for="dinner">Comedor</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="kitchen">
-                                <label class="victLbl" for="kitchen">Cocina</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="ball">
-                                <label class="victLbl" for="ball">Salón de baile</label></td>
-                         <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="conser">
-                                <label class="victLbl" for="conser">Jardín de invierno</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="bill">
-                                <label class="victLbl" for="bill">Sala de billar</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="lib">
-                                <label class="victLbl" for="lib">Biblioteca</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="study">
-                                <label class="victLbl" for="study">Estudio</label></td>
-                    </tr>
+                <div class="section1-subdiv1--table_container">
+                    <table>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="gato">
+                                    <span>Gato</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="gato" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="tero">
+                                    <span>Tero</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="tero" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="buey">
+                                    <span>Buey</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="buey" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="lor">
+                                    <span>Lorna</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lor" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="ardilla">
+                                    <span>Ardilla</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="ardilla" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="buho">
+                                    <span>Búho</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="buho" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="lince">
+                                    <span>Lince</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lince" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="pantera">
+                                    <span>Pantera</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="pantera" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="orca">
+                                    <span>Orca</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="orca" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="cigu">
+                                    <span>Cigüeña</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="cigu" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="tibu">
+                                    <span>Tiburón</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="tibu" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="edi">
+                                    <span>Edith</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="edi" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="oso">
+                                    <span>Oso</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="oso" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="llama">
+                                    <span>Llama</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="llama" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="fonti">
+                                    <span>Fonti</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="fonti" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="clau">
+                                    <span>Claudia</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="clau" onclick="sospechoso()">
+                                    <span class="logo"></span>
+                                </label>
+                            </td>
+                        </tr>
                     </table>
                 </div>
-                <div class="herramientas">
-                    <h3>Herramientas:</h3>
-                    <table class="tabla">
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="axe">
-                                <label class="victLbl" for="axe">Hacha</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="nav">
-                                <label class="victLbl" for="nav">Navaja</label></td>
-                    </tr>
-                    <tr>
-                         <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="soga">
-                                <label class="victLbl" for="soga">Soga</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="fuego">
-                                <label class="victLbl" for="fuego">Fogón</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="pala">
-                                <label class="victLbl" for="pala">Pala</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="lob">
-                                <label class="victLbl" for="lob">Lobato</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="spoon">
-                                <label class="victLbl" for="spoon">Cucharón</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="cajón">
-                                <label class="victLbl" for="cajón">Cajón de patrulla</label></td>
-                    </tr>
-                    <tr>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="garrafa">
-                                <label class="victLbl" for="garrafa">Garrafa</label></td>
-                        <td class="celda"><input class="victChk" type="checkbox" name="checkbox" id="letrina">
-                                <label class="victLbl" for="letrina">Letrina</label></td>
-                    </tr>
+            </div>
+            <div class="section1-div2">
+                <h3>Lugar:</h3>
+                <div class="section1-subdiv1--table_container">
+                    <table>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="hall">
+                                    <span>Hall</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="hall" onclick="donde()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="lounge">
+                                    <span>Sala de estar</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lounge" onclick="donde()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="dinner">
+                                    <span>Comedor</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="dinner" onclick="donde()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="kitchen">
+                                    <span>Cocina</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="kitchen" onclick="donde()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="ball">
+                                    <span>Salón de baile</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="ball" onclick="donde()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="study">
+                                    <span>Estudio</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="study" onclick="donde()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="bill">
+                                    <span>Sala de billar</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="bill" onclick="donde()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="lib">
+                                    <span>Biblioteca</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lib" onclick="donde()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="conser">
+                                    <span>Jardín de invierno</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="conser" onclick="donde()">
+                                </label>
+                            </td>
+                        </tr>
                     </table>
                 </div>
-            </form>
-        <br>
-    </div>
-    </p>
-    <div id="sol" class="solucion">
-        <p>
-            <h2>Solución</h2>
-            <table>
-                <tr>
-                    <td class="solTabla">Victimario: </td>
-                    <td><input class="solTabla" type="text" placeholder="Victimario" oninput="victimario.innerText = this.value" name="victimario"></td>
-                </tr>
-                <tr>
-                    <td class="solTabla">Victima: </td>
-                    <td><input class="solTabla" type="text" placeholder="Victima" oninput="victima.innerText = this.value" name="victima"></td>
-                </tr>
-                <tr>
-                    <td class="solTabla">Herramienta: </td>
-                    <td><input class="solTabla" type="text" placeholder="Herramienta" oninput="herramienta.innerText = this.value" name="herramienta"></td>
-                </tr>
-                <tr>
-                    <td class="solTabla">Lugar: </td>
-                    <td><input class="solTabla" type="text" placeholder="Lugar" oninput="lugar.innerText = this.value" name="lugar"></td>
-                </tr>
-            </table>
-            <br>
-        </p>
-        <p class="resp"><label class="sol" id="victimario">____</label><label> mató a </label><label class="sol" id="victima">____</label><label> con </label><label class="sol" id="herramienta">____</label><label> en </label><label class="sol" id="lugar">____</label><label>.</label> </p>
-    </div>    
-    <p></p>
-    <p></p>
-    <div id="reg" class="reglamento">
-        <h2>Reglamento</h2>
-        <p>¡Algo pasó! Y lo que parecía una simple reunión de amigos se convirtió en un baño de sangre…<br>
-Tu misión, si decides aceptarla, es descubrir quién fue el asesino y a quién mató. Además tenés que encontrar el arma homicida y dónde sucedió el hecho.<br>
-<br>
-A cada investigador se le dará una planilla de investigación para recabar ahí los datos necesarios.<br> 
-Para preparar el juego deben separar cuatro mazos, dos con los personajes separados por columna, otro con las herramientas y el último con las habitaciones. Se lanzará un dado, si sale impar los asesinos serán los de la 1er columna, si sale par serán los de la 2da. De cada mazo uno de los jugadores debe elegir sin ver una carta que se guardará en el sobre confidencial. La víctima se marcará con la V antes de guardarla en el sobre.
-A continuación se mezclarán todas las cartas y se repartirán entre todos los jugadores. Estos anotarán en su planilla de investigación la información que recibieron.<br>
-<br>
-El primero en jugar será el que menos cartas tenga. En caso de que 2 o más jugadores tengan la misma cantidad de cartas, se definirá quién comienza con una ronda de piedra, papel o tijera.<br>
-Cada jugador en su turno avanzará el número de casilleros que indique el dado en dirección al cuarto al que quiera ir. Luego pasará el turno al jugador de la derecha y así sucesivamente. se entrará al cuarto si el número sacado con un puntaje igual o superior al necesario para llegar. Para utilizar los pasajes secretos, el jugador deberá tirar los dados y sacar un puntaje superior a 7.<br>
-Al entrar en un cuarto el investigador deberá contar en voz alta lo que cree que allí sucedió, detallando quién cometió el crimen, quién es la víctima y cuál fue el arma homicida.<br>
-Una vez finalizada la historia, el jugador de su derecha deberá verificar si entre sus cartas tiene al menos una que refute la sospecha. En caso de tenerla, debe mostrar UNA sola carta al jugador que formuló la sospecha, sin que el resto la vea (si se tiene una carta es obligatorio mostrarla, pero se puede mostrar la misma carta  varias veces).
-Si el jugador de la derecha no tiene ninguna carta incluída en el relato, pasará la pregunta al siguiente jugador y así sucesivamente hasta que se haya mostrado una de las cartas a quien manifestó la sospecha. Luego de corroborar la información pasará el turno al siguiente jugador.<br>
-Los investigadores no podrán quedarse en las habitaciones en turnos sucesivos.<br>
-<br>
-Cuando un investigador esté seguro de que puede resolver el misterio, en su turno (siempre y cuando no haya tirado el dado) puede anotar su solución y abrir el sobre confidencial para mirar las cartas que contiene sin mostrarlas a los demás. Si su solución coincide con el contenido del sobre, declarará que ganó y mostrará las cartas y lo que escribió, de esta manera ganando la partida. Si su solución no coincide, devolverá las cartas al sobre y quedará eliminado. Sus cartas se repartirán entre los otros jugadores.<br>
-<br>
-Lo que pasa en el consejo, queda en el consejo...</p>
-    </div>
-    <footer>
-        <table>
-            <tr><td><a class="link" href="#inv">Planilla</a></td>
-                <td></td>
-                <td><a class="link" href="#sol">Solución</a></td>
-            </tr>
-        </table>
-    </footer>
+            </div>
+            <div class="section1-div3">
+                <h3>Herramientas:</h3>
+                <div class="section1-subdiv1--table_container">
+                    <table>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="navaja">
+                                    <span>Navaja</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="navaja" onclick="herramienta()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="soga">
+                                    <span>Soga</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="soga" onclick="herramienta()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="fuego">
+                                    <span>Fogón</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="fuego" onclick="herramienta()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="pala">
+                                    <span>Pala</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="pala" onclick="herramienta()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="lob">
+                                    <span>Lobato</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lob" onclick="herramienta()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="spoon">
+                                    <span>Cucharón de madera</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="spoon" onclick="herramienta()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="cajon">
+                                    <span>Cajón de patrulla</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="cajon" onclick="herramienta()">
+                                </label>
+                            </td>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="garrafa">
+                                    <span>Garrafa</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="garrafa" onclick="herramienta()">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subdiv1-table--cell">
+                                <label class="victLbl" for="letrina">
+                                    <span>Letrina</span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="letrina" onclick="herramienta()">
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>                
+            </div>
+        </section>
+        <section id="sol" class="container">
+                <div class="section-title"><h2>Solución</h2></div>
+                <div class="section2-div1" id="solucion--div">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="victimario">
+                                    <span>Victimario: </span>
+                                    <input class="solTabla" type="text" placeholder="Victimario" oninput="victimario_sol.innerText = this.value" name="victimario">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="victima">
+                                    <span>Victima: </span>
+                                    <input class="solTabla" type="text" placeholder="Victima" oninput="victima_sol.innerText = this.value" name="victima">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="herramienta">
+                                    <span>Herramienta: </span>
+                                    <input class="solTabla" type="text" placeholder="Herramienta" oninput="herramienta_sol.innerText = this.value" name="herramienta">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lugar">
+                                    <span>Lugar: </span>
+                                    <input class="solTabla" type="text" placeholder="Lugar" oninput="lugar_sol.innerText = this.value" name="lugar">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="Guardar" class="boton" id="solucion--boton" onclick='solucionBoton()'>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="section2-div2">
+                    <label class="sol" id="victimario_sol">____</label>
+                    <label> mató a </label>
+                    <label class="sol" id="victima_sol">____</label>
+                    <label> con </label>
+                    <label class="sol" id="herramienta_sol">____</label>
+                    <label> en </label>
+                    <label class="sol" id="lugar_sol">____</label>
+                    <label>.</label>
+                </div>
+        </section>
+        <section id="reg" class="container">
+            <div class="section-title"><h2>Reglamento</h2></div>
+            <p>
+                ¡Algo pasó! Y lo que parecía una simple reunión de amigos se convirtió en un baño de sangre…
+            </p>
+            <p>
+                Tu misión, si decides aceptarla, es descubrir quién fue el asesino y a quién mató. Además tenés que encontrar el arma homicida y dónde sucedió el hecho.
+            </p>
+            <p>
+                A cada investigador se le dará una planilla de investigación para recabar ahí los datos necesarios.
+            </p>
+            <p>
+                Para preparar el juego deben separar cuatro mazos, dos con los personajes separados por columna, otro con las herramientas y el último con las habitaciones. Se lanzará un dado, si sale impar los asesinos serán los de la 1er columna, si sale par serán los de la 2da. De cada mazo uno de los jugadores debe elegir sin ver una carta que se guardará en el sobre confidencial. La víctima se marcará con la V antes de guardarla en el sobre.
+                A continuación se mezclarán todas las cartas y se repartirán entre todos los jugadores. Estos anotarán en su planilla de investigación la información que recibieron.
+            </p>
+            <p>
+                El primero en jugar será el que menos cartas tenga. En caso de que 2 o más jugadores tengan la misma cantidad de cartas, se definirá quién comienza con una ronda de piedra, papel o tijera.
+            </p>
+            <p>
+                Cada jugador en su turno avanzará el número de casilleros que indique el dado en dirección al cuarto al que quiera ir. Luego pasará el turno al jugador de la derecha y así sucesivamente. se entrará al cuarto si el número sacado con un puntaje igual o superior al necesario para llegar. Para utilizar los pasajes secretos, el jugador deberá tirar los dados y sacar un puntaje superior a 7.
+            </p>
+            <p>
+                Al entrar en un cuarto el investigador deberá contar en voz alta lo que cree que allí sucedió, detallando quién cometió el crimen, quién es la víctima y cuál fue el arma homicida.
+            </p>
+            <p>
+                Una vez finalizada la historia, el jugador de su derecha deberá verificar si entre sus cartas tiene al menos una que refute la sospecha. En caso de tenerla, debe mostrar UNA sola carta al jugador que formuló la sospecha, sin que el resto la vea (si se tiene una carta es obligatorio mostrarla, pero se puede mostrar la misma carta  varias veces).
+                Si el jugador de la derecha no tiene ninguna carta incluída en el relato, pasará la pregunta al siguiente jugador y así sucesivamente hasta que se haya mostrado una de las cartas a quien manifestó la sospecha. Luego de corroborar la información pasará el turno al siguiente jugador.
+            </p>
+            <p>
+                Los investigadores no podrán quedarse en las habitaciones en turnos sucesivos.
+            </p>
+            <p>
+                Cuando un investigador esté seguro de que puede resolver el misterio, en su turno (siempre y cuando no haya tirado el dado) puede anotar su solución y abrir el sobre confidencial para mirar las cartas que contiene sin mostrarlas a los demás. Si su solución coincide con el contenido del sobre, declarará que ganó y mostrará las cartas y lo que escribió, de esta manera ganando la partida. Si su solución no coincide, devolverá las cartas al sobre y quedará eliminado. Sus cartas se repartirán entre los otros jugadores.
+            </p>
+            <p>
+                Lo que pasa en el consejo, queda en el consejo...
+            </p>
+        </section>
+        <footer class="main-footer">
+            <ul>
+                <li><a class="link" href="#plan">Planilla</a></li>
+                <li><a class="link" href="#sol">Solución</a></li>
+            </ul>
+            <p>Ge Cirou</p>
+        </footer>
+    </main>
 </body>
 </html>
