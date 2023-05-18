@@ -1,0 +1,28 @@
+html {
+    font-size: 90%;
+}
+.container {
+    max-width: 1500px;
+    padding: 5rem;
+}
+.section-title{
+    margin-bottom: 5rem;
+}
+.section1-div1 {
+    width: 30%;
+    margin: auto;
+    order: 2;
+}
+.section1-div2 {
+    width: 30%;
+    margin: auto;
+    order: 1;
+}
+.section1-div3 {
+    width: 30%;
+    margin: auto;
+    order: 3;
+}
+.section2-div2 {
+    font-size: 3rem;
+}

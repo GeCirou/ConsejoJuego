@@ -48,6 +48,7 @@ var asesino = [];
 var herramienta = 0;
 var lugar = 0;
 
+
 function investigadorBoton() {
     document.getElementById("investigador--input").style.display = 'none';
 }
@@ -59,8 +60,74 @@ function victim2(){
     document.getElementById("victLbl1").style.display = 'none';
 }
 
-function sospechoso() {
-    alert("Fui yo?")
+// Botones sospechosos:
+function sospechoso(name) {
+    switch (name){
+        case "Gato":
+            document.getElementById('labelGato').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoGato').style.display = 'none';
+            break;
+        case "Tero":
+            document.getElementById('labelTero').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoTero').style.display = 'none';
+            break;
+        case "Buey":
+            document.getElementById('labelBuey').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoBuey').style.display = 'none';
+            break;
+        case "Lor":
+            document.getElementById('labelLor').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoLor').style.display = 'none';
+            break;
+        case "Ard":
+            document.getElementById('labelArd').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoArd').style.display = 'none';
+            break;
+        case "Bu":
+            document.getElementById('labelBu').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoBu').style.display = 'none';
+            break;
+        case "Li":
+            document.getElementById('labelLi').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoLi').style.display = 'none';
+            break;
+        case "Pan":
+            document.getElementById('labelPan').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoPan').style.display = 'none';
+            break;
+        case "Orca":
+            document.getElementById('labelOrca').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoOrca').style.display = 'none';
+            break;
+        case "Cigu":
+            document.getElementById('labelCigu').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoCigu').style.display = 'none';
+            break;
+        case "Tibu":
+            document.getElementById('labelTibu').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoTibu').style.display = 'none';
+            break;
+        case "Edi":
+            document.getElementById('labelEdi').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoEdi').style.display = 'none';
+            break;
+        case "Oso":
+            document.getElementById('labelOso').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoOso').style.display = 'none';
+            break;
+        case "Llama":
+            document.getElementById('labelLlama').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoLlama').style.display = 'none';
+            break;
+        case "Fonti":
+            document.getElementById('labelFonti').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoFonti').style.display = 'none';
+            break;
+        case "Clau":
+            document.getElementById('labelClau').style.backgroundImage = 'linear-gradient(180deg,rgba(0,0,0,0.8), rgba(255, 0 , 0, 0.8), rgba(0,0,0,0.8))';
+            document.getElementById('logoClau').style.display = 'none';
+            break;
+    }
 }
 
 function donde(){

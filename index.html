@@ -7,6 +7,8 @@
     <meta name="description" content="Página armada para usar como planilla en un juego de Clue modificado.">
     <title>El consejo se descontroló</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./tablet.css" media="(min-width: 700px)">
+    <link rel="stylesheet" href="./desktop.css" media="(min-width: 1100px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -45,13 +47,13 @@
                             <td class="subdiv1-table--cell" id="cellVict1">
                                 <label class="victLbl" for="vict1" id="victLbl1">
                                     <span>Victima</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="vict1" onclick="victim1()">
+                                    <input class="victChk" type="button" name="victlbl1" id="vict1" onclick="victim1()">
                                 </label>
                             </td>
                             <td class="subdiv1-table--cell">
                                 <label class="victLbl" for="vict2" id="victLbl2">
                                     <span>Victima</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="vict2" onclick="victim2()">
+                                    <input class="victChk" type="button" name="victlbl2" id="vict2" onclick="victim2()">
                                 </label>
                             </td>
                         </tr>
@@ -60,130 +62,130 @@
                 <div class="section1-subdiv1--table_container">
                     <table>
                         <tr>
-                            <td class="subdiv1-table--cell">
-                                <label class="victLbl" for="gato">
+                            <td class="subdiv1-table--cell" id="labelGato">
+                                <label class="victLbl" for="gato" >
                                     <span>Gato</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="gato" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="button" name="gato" id="gato" onclick="sospechoso('Gato')">
+                                    <span class="logo" id="logoGato"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelTero">
                                 <label class="victLbl" for="tero">
                                     <span>Tero</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="tero" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="button" name="tero" id="tero" onclick="sospechoso('Tero')">
+                                    <span class="logo" id="logoTero"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelBuey">
                                 <label class="victLbl" for="buey">
                                     <span>Buey</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="buey" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="buey" onclick="sospechoso('Buey')">
+                                    <span class="logo" id="logoBuey"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelLor">
                                 <label class="victLbl" for="lor">
                                     <span>Lorna</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="lor" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lor" onclick="sospechoso('Lor')">
+                                    <span class="logo" id="logoLor"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelArd">
                                 <label class="victLbl" for="ardilla">
                                     <span>Ardilla</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="ardilla" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="ardilla" onclick="sospechoso('Ard')">
+                                    <span class="logo" id="logoArd"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelBu">
                                 <label class="victLbl" for="buho">
                                     <span>Búho</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="buho" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="buho" onclick="sospechoso('Bu')">
+                                    <span class="logo" id="logoBu"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelLi">
                                 <label class="victLbl" for="lince">
                                     <span>Lince</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="lince" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="lince" onclick="sospechoso('Li')">
+                                    <span class="logo" id="logoLi"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelPan">
                                 <label class="victLbl" for="pantera">
                                     <span>Pantera</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="pantera" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="pantera" onclick="sospechoso('Pan')">
+                                    <span class="logo" id="logoPan"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelOrca">
                                 <label class="victLbl" for="orca">
                                     <span>Orca</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="orca" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="orca" onclick="sospechoso('Orca')">
+                                    <span class="logo" id="logoOrca"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelCigu">
                                 <label class="victLbl" for="cigu">
                                     <span>Cigüeña</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="cigu" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="cigu" onclick="sospechoso('Cigu')">
+                                    <span class="logo" id="logoCigu"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelTibu">
                                 <label class="victLbl" for="tibu">
                                     <span>Tiburón</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="tibu" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="tibu" onclick="sospechoso('Tibu')">
+                                    <span class="logo" id="logoTibu"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelEdi">
                                 <label class="victLbl" for="edi">
                                     <span>Edith</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="edi" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="edi" onclick="sospechoso('Edi')">
+                                    <span class="logo" id="logoEdi"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelOso">
                                 <label class="victLbl" for="oso">
                                     <span>Oso</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="oso" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="oso" onclick="sospechoso('Oso')">
+                                    <span class="logo" id="logoOso"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelLlama">
                                 <label class="victLbl" for="llama">
                                     <span>Llama</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="llama" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="llama" onclick="sospechoso('Llama')">
+                                    <span class="logo" id="logoLlama"></span>
                                 </label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelFonti">
                                 <label class="victLbl" for="fonti">
                                     <span>Fonti</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="fonti" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="fonti" onclick="sospechoso('Fonti')">
+                                    <span class="logo" id="logoFonti"></span>
                                 </label>
                             </td>
-                            <td class="subdiv1-table--cell">
+                            <td class="subdiv1-table--cell" id="labelClau">
                                 <label class="victLbl" for="clau">
                                     <span>Claudia</span>
-                                    <input class="victChk" type="checkbox" name="checkbox" id="clau" onclick="sospechoso()">
-                                    <span class="logo"></span>
+                                    <input class="victChk" type="checkbox" name="checkbox" id="clau" onclick="sospechoso('Clau')">
+                                    <span class="logo" id="logoClau"></span>
                                 </label>
                             </td>
                         </tr>
