@@ -6,7 +6,6 @@
 	--fontSolución:  'Dancing Script', cursive;
 	--mainFont: 'Playfair Display', serif;
 }
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -20,12 +19,27 @@ body {
 	font-family: var(--mainFont);
     color:white;
 	text-align: center;
+	background-color: var(--backColor);
 }
 
+/*Header*/
+header,
+footer {
+	width: 100%;
+	background-color: var(--backColorHeadFoot);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.main-nav li,
+.main-footer li {
+	display: inline-block;
+	list-style: none;
+}
+
+/* Main */
 main {
 	width: 100vw;
 	height: 100%;
-	background-color: var(--backColor);
 	font-size: 2rem;
 }
 
@@ -64,21 +78,6 @@ p {
 .link:hover{
 	color: var(--secondaryColor);
 }
-
-/*Header*/
-header,
-footer {
-	width: 100%;
-	background-color: var(--backColorHeadFoot);
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-.main-nav li,
-.main-footer li {
-	display: inline-block;
-	list-style: none;
-}
-
 
 /* etiqueta investigador */
 .main-investigador {
@@ -159,6 +158,7 @@ footer {
 	cursor: pointer;
 }
 
+/* Logos */
 .section1-div1 .section1-subdiv1--table_container .subdiv1-table--cell .logo {
 	display: inline-block;
 	width: 3rem;
@@ -168,6 +168,29 @@ footer {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	vertical-align: text-bottom;
+}
+.section1-div2 .logoLugar {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	margin-left: 1rem;
+	background-image: url('./Img/map.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	vertical-align: text-bottom;
+}
+.section1-div3 .logoArma {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: 1rem;
+	background-image: url('./Img/cuchi.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	vertical-align: text-bottom;
 }
 
 
